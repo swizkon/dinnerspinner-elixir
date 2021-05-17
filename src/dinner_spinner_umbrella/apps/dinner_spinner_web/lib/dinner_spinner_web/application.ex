@@ -9,6 +9,9 @@ defmodule DinnerSpinnerWeb.Application do
     children = [
       # Start the Telemetry supervisor
       DinnerSpinnerWeb.Telemetry,
+
+      {Phoenix.PubSub, [name: DinnerSpinnerWeb.PubSub, adapter: Phoenix.PubSub.PG2]},
+
       # Start the Endpoint (http/https)
       DinnerSpinnerWeb.Endpoint
       # Start a worker by calling: DinnerSpinnerWeb.Worker.start_link(arg)
