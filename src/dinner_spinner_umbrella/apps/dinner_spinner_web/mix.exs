@@ -24,7 +24,7 @@ defmodule DinnerSpinnerWeb.MixProject do
   def application do
     [
       mod: {DinnerSpinnerWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :postgrex, :ecto]
     ]
   end
 

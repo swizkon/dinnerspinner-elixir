@@ -9,6 +9,18 @@
 # move said applications out of the umbrella.
 import Config
 
+# Configure your database
+config :dinner_spinner, DinnerSpinner.Repo,
+  username: "postgres",
+  password: "postgres",
+  database: "dinner_spinner_dev",
+  hostname: "localhost",
+  show_sensitive_data_on_connection_error: true,
+  adapter: Ecto.Adapters.Postgres,
+  pool_size: 10
+
+config :dinner_spinner, ecto_repos: [DinnerSpinner.Repo]
+
 config :dinner_spinner_web,
   ecto_repos: [DinnerSpinnerWeb.Repo],
   generators: [context_app: false]

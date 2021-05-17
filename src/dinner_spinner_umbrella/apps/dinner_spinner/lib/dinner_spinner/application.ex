@@ -9,6 +9,9 @@ defmodule DinnerSpinner.Application do
     children = [
       # Starts a worker by calling: DinnerSpinner.Worker.start_link(arg)
       # {DinnerSpinner.Worker, arg}
+
+      {DinnerSpinner.Repo, []}
+      # worker(DinnerSpinner.Repo, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
