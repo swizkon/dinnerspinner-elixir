@@ -3,7 +3,16 @@ defmodule DinnerSpinner.DinnerQueries do
 
     alias DinnerSpinner.{Repo, Dinners}
 
+    def any do
+        Repo.one(from d in Dinners, select: count(d.id)) != 0
+   end
+
     def get_all do
          Repo.all(from Dinners)
+    end
+
+    def create(dinner) do        
+        DinnerSpinner.Dinners.changeset(%DinnerSpinner.Dinners{}, dinner)
+        |> Repo.insert!
     end
 end
