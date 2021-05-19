@@ -24,7 +24,7 @@ defmodule DinnerSpinnerWeb.MixProject do
   def application do
     [
       mod: {DinnerSpinnerWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools, :postgrex, :ecto]
+      extra_applications: [:logger, :runtime_tools, :postgrex, :ecto, :dinner_spinner]
     ]
   end
 
@@ -46,7 +46,8 @@ defmodule DinnerSpinnerWeb.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:dinner_spinner, in_umbrella: true}
     ]
   end
 

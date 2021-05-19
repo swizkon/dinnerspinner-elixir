@@ -17,6 +17,9 @@ defmodule DinnerSpinnerWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    
+    get "/dinners/:id", DinnerController, :show
+    get "/dinners", DinnerController, :index
   end
 
   # Other scopes may use custom stacks.

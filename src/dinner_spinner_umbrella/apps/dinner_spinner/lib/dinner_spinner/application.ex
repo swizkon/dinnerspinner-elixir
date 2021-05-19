@@ -11,7 +11,6 @@ defmodule DinnerSpinner.Application do
       # {DinnerSpinner.Worker, arg}
 
       {DinnerSpinner.Repo, []}
-      # worker(DinnerSpinner.Repo, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

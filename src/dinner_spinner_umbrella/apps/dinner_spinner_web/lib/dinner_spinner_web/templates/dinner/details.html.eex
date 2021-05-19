@@ -1,0 +1,4 @@
+<section class="phx-hero">
+  <h1><%= @dinner.title %></h1>
+  <p><%= @dinner.ingredients %></p>
+</section>
