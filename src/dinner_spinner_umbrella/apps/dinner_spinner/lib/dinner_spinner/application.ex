@@ -8,8 +8,6 @@ defmodule DinnerSpinner.Application do
   def start(_type, _args) do
     children = [
       # Starts a worker by calling: DinnerSpinner.Worker.start_link(arg)
-      # {DinnerSpinner.Worker, arg}
-
       {DinnerSpinner.Repo, []}
     ]
 

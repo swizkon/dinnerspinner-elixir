@@ -5,15 +5,15 @@ defmodule DinnerSpinner.DinnerQueries do
 
     def any do
         Repo.one(from d in Dinners, select: count(d.id)) != 0
-   end
+    end
 
-   def get_by_id(id) do
-    Repo.one(from d in Dinners, where: d.id == ^id)
-   end
+    def get_by_id(id) do
+        Repo.one(from d in Dinners, where: d.id == ^id)
+    end
 
-   def get_all do
+    def get_all do
         Repo.all(from Dinners)
-   end
+    end
 
     def create(dinner) do        
         DinnerSpinner.Dinners.changeset(%DinnerSpinner.Dinners{}, dinner)
